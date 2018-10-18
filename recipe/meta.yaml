@@ -1,0 +1,43 @@
+package:
+  name: ndarray
+  version: 1.5.2
+
+source:
+  url: https://github.com/ndarray/ndarray/archive/1.5.2.tar.gz
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - cmake
+    - boost
+    - fftw
+    - numpy
+    - pybind11
+    - swig
+    - doxygen
+    - eigen
+    - pkgconfig
+    - python
+    - {{ compiler('cxx') }}
+
+  host:
+    - boost
+    - fftw
+    - numpy
+    - swig
+    - eigen
+
+  run:
+    - boost
+    - fftw
+    - numpy
+    - swig
+    - eigen
+
+about:
+  home: https://github.com/ndarray/ndarray/
+  license: BSD
+  license_file: LICENSE
+  summary: NumPy-friendly multidimensional arrays in C++
