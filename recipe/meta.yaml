@@ -6,12 +6,12 @@ source:
   url: https://github.com/ndarray/ndarray/archive/1.5.2.tar.gz
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
     - cmake
-    - boost
+    - boost-cpp
     - fftw
     - numpy
     - pybind11
@@ -23,14 +23,14 @@ requirements:
     - {{ compiler('cxx') }}
 
   host:
-    - boost
+    - boost-cpp
     - fftw
     - numpy
     - swig
     - eigen
 
   run:
-    - boost
+    - boost-cpp
     - fftw
     - numpy
     - swig
